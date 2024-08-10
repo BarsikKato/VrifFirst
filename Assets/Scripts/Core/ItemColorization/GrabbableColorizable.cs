@@ -1,11 +1,11 @@
-using BNG;
+п»їusing BNG;
 using System.Collections;
 using UnityEngine;
 
 namespace Core.ItemColorization
 {
     /// <summary>
-    /// Дополнение для <see cref="BNG.Grabber"/>, меняющее цвет предмету при его подборе.
+    /// Р”РѕРїРѕР»РЅРµРЅРёРµ РґР»СЏ <see cref="BNG.Grabber"/>, РјРµРЅСЏСЋС‰РµРµ С†РІРµС‚ РїСЂРµРґРјРµС‚Сѓ РїСЂРё РµРіРѕ РїРѕРґР±РѕСЂРµ.
     /// </summary>
     [RequireComponent(typeof(MeshRenderer))]
     public sealed class GrabbableColorizable : GrabbableEvents
@@ -36,9 +36,9 @@ namespace Core.ItemColorization
         }
 
         /// <summary>
-        /// Покрасить предмет в указанный цвет.
+        /// РџРѕРєСЂР°СЃРёС‚СЊ РїСЂРµРґРјРµС‚ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ С†РІРµС‚.
         /// </summary>
-        /// <param name="color">Цвет для покраски.</param>
+        /// <param name="color">Р¦РІРµС‚ РґР»СЏ РїРѕРєСЂР°СЃРєРё.</param>
         private void ColorizeTo(Color color)
         {
             if (_colorizeCoroutine != null)
@@ -54,7 +54,7 @@ namespace Core.ItemColorization
             Material rendererMaterial = _renderer.material;
             Color startingColor = color == _normalColor ? grabColor : _normalColor;
             
-            // Вычисление нужно в случае, если предыдущая анимация была прервана
+            // Р’С‹С‡РёСЃР»РµРЅРёРµ РЅСѓР¶РЅРѕ РІ СЃР»СѓС‡Р°Рµ, РµСЃР»Рё РїСЂРµРґС‹РґСѓС‰Р°СЏ Р°РЅРёРјР°С†РёСЏ Р±С‹Р»Р° РїСЂРµСЂРІР°РЅР°
             _animationTime = 1f - _animationTime;
             while (_animationTime <= 1f)
             {
