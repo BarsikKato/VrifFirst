@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Core.ItemColorization
 {
+    /// <summary>
+    /// Дополнение для <see cref="BNG.Grabber"/>, меняющее цвет предмету при его подборе.
+    /// </summary>
     [RequireComponent(typeof(MeshRenderer))]
     public sealed class GrabbableColorizable : GrabbableEvents
     {
